@@ -1,0 +1,354 @@
+/*This is an example of external CSS */
+/* Each id name can only be used once */
+
+/* Styles in the body get inherited */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #444;
+
+  border-top: 10px solid #272acccc;
+  position: relative;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* padding: value1:(Rop & Bottom) value2:(Left & Right) */
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 30px;
+  /* margin-bottom: 60px;
+  height: 80px; */
+}
+
+nav {
+  font-size: 18px;
+  text-align: center;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+/* article {
+  margin-bottom: 60px;
+} */
+
+h1,
+h2,
+h3 {
+  color: #272acccc;
+}
+
+h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 5px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* For id, use: # */
+
+#copyright {
+  font-size: 16px;
+}
+
+#author {
+  font-style: italic;
+  font-size: 16;
+}
+
+/* For classes, use: . */
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related-posts {
+  list-style: none;
+  margin-left: 0px;
+}
+
+/* This is a shorthand property */
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #27ccc4cc;
+  border-bottom: 5px solid #27ccc4cc;
+  padding: 50px 40px;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/* psudoe classes */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* can use to style tables  */
+/* li:nth-child(odd) {
+  color: red;
+} */
+
+article p:last-child {
+  color: red;
+}
+
+/* styling links */
+/* LVHA */
+a:link {
+  color: green;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(125, 125, 125);
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+/* id selectors are always the highest priority */
+/* Inherited values have lowest priority */
+#copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
+}
+
+nav a:link {
+  margin-right: 30px;
+
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Pseudo elements */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: yellow;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: -40px;
+}
+
+/* Floats */
+/* .author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  margin-top: 10px;
+  float: left;
+  margin-left: 20px;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+article {
+  width: 825px;
+  float: left;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
+} */
+
+/* Flexbox */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.related-link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Flexbox layout */
+/* .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin-bottom: 60px;
+}
+
+article {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+aside {
+  flex: 0 0 300px;
+} */
+
+/* CSS Grid Layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1 / span 2;
+}
+
+article {
+}
+
+aside {
+}
+
+footer {
+  grid-column: 1/-1;
+}
