@@ -161,3 +161,18 @@
     </div>
   </body>
 </html>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BLOG</title>
+  </head>
+  <body>
+    <h2>Blog</h2>
+
+    <p>You can start blogging here!</p>
+    <a href="index.html">Return to main site</a>
+  </body>
+</html>
+
